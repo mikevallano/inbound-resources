@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'faker'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -18,6 +19,7 @@ gem 'devise_invitable'
 gem 'high_voltage'
 gem 'puma'
 gem 'simple_form'
+gem 'awesome_print'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

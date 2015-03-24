@@ -5,5 +5,16 @@
   <%= @category.name %>
 </p>
 
+
+  <strong>Resources:</strong>
+  <% @category.resources.each do |resource| %>
+  <ul>
+    <li>Name: <%= resource.name %></li>
+    <li>TLDR: <%= resource.tldr %></li>
+    <li>Link: <%= resource.link %></li>
+  </ul>
+  <% end %>
+
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

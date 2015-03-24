@@ -7,6 +7,16 @@
     <%= f.input :link %>
   </div>
 
+  <div class="field">
+    <%= hidden_field_tag "resrouce[category_ids][]", nil %>
+    <% Category.all.each do |category| %>
+      <%= check_box_tag "resource[category_ids][]",
+      category.id, @resource.category_ids.include?(category.id),
+      id: dom_id(category) %>
+      <%= label_tag dom_id(category), category.name %><br>
+    <% end %>
+  </div>
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

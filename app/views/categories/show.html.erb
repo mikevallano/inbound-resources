@@ -9,7 +9,7 @@
   <strong>Resources:</strong>
   <% @category.resources.each do |resource| %>
   <ul>
-    <li>Name: <%= resource.name %></li>
+    <li>Name: <%= link_to "#{resource.name.titlecase}", resource_path(resource.id) %></li>
     <li>TLDR: <%= resource.tldr %></li>
     <li>Link: <%= resource.link %></li>
   </ul>

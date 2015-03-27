@@ -15,5 +15,14 @@
   <%= @resource.link %>
 </p>
 
+<p>
+  <strong>Categories:</strong>
+  <% @resource.categories.each do |category| %>
+  <ul>
+    <li><%= link_to "#{category.name.titlecase}", category_path(category.id) %>
+    </ul>
+    <% end %>
+</p>
+
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>

@@ -26,9 +26,11 @@ class ResourcesController < ApplicationController
   # POST /resources.json
   def create
     @resource = Resource.new(resource_params)
+    @user = current_user
 
     respond_to do |format|
       if @resource.save
+        UserNotifier.send_notification_email(current_user).deliver
         format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
         format.json { render :show, status: :created, location: @resource }
       else

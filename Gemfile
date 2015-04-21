@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'faker'
 gem "figaro"
 gem 'pg'
+gem 'puma'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -19,7 +20,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
 gem 'high_voltage'
-gem 'puma'
+#gem 'puma'
 gem 'simple_form'
 gem 'awesome_print'
 group :development do
